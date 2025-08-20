@@ -1,2 +1,2 @@
 # mctui
-tui based dashboard giving live updates for a minecraft server
+rust based tui dashboard giving live updates for a minecraft server

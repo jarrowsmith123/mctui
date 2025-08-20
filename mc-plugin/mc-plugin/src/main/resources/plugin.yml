@@ -1,0 +1,4 @@
+main: com.jarrowsmith123.Main
+version: 1.0-SNAPSHOT
+name : mctui
+api-version: 1.21.8

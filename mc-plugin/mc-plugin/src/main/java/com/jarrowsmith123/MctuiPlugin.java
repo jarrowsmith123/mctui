@@ -1,6 +1,7 @@
 package com.jarrowsmith123;
 
 import com.jarrowsmith123.listeners.PlayerListener;
+import com.jarrowsmith123.network.HttpManager;
 import org.bukkit.Location;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -13,8 +14,8 @@ public class MctuiPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
-        getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
+        HttpManager httpManager = new HttpManager(this);
+        getServer().getPluginManager().registerEvents(new PlayerListener(this, httpManager), this);
         getLogger().info("Player listeners have been registered."); // Good to add a confirmation
     }
 
